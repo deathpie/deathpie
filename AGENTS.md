@@ -8,7 +8,7 @@ the account's profile page.
 
 - `README.md`: the profile text. Keep it short; it is a landing page, not a project.
 - `favicon.svg`: the T3 Code project icon.
-- `lefthook.yml`: loads the shared hook jobs from `deathpie/.github` at `hooks-v2`. The
+- `lefthook.yml`: loads the shared hook jobs from `deathpie/.github` at `hooks-v3`. The
   `core-policy` job refuses a push to `main` and refuses unsigned commits.
 - `docs/exceptions.md`: rules this repository cannot meet, with reasons and revisit dates.
 
