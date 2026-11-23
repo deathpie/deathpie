@@ -1,0 +1,6 @@
+# Tools pinned for every deathpie repository. Keep the versions identical across
+# the account so recipes behave the same everywhere.
+
+[tools]
+just = "1.59.0"
+bun = "1.4.5"
