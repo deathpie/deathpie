@@ -4,3 +4,5 @@
 [tools]
 just = "1.59.0"
 bun = "1.4.5"
+"aqua:evilmartians/lefthook" = "2.2.2"
+"aqua:gitleaks/gitleaks" = "8.30.1"

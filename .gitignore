@@ -1,0 +1,2 @@
+# Local Lefthook overrides; never commit (C7.8).
+lefthook-local.yml
