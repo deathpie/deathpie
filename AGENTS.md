@@ -8,6 +8,8 @@ the account's profile page.
 
 - `README.md`: the profile text. Keep it short; it is a landing page, not a project.
 - `favicon.svg`: the T3 Code project icon.
+- `lefthook.yml`: loads the shared hook jobs from `deathpie/.github` at `hooks-v2`. The
+  `core-policy` job refuses a push to `main` and refuses unsigned commits.
 - `docs/exceptions.md`: rules this repository cannot meet, with reasons and revisit dates.
 
 ## Commands
@@ -16,6 +18,8 @@ the account's profile page.
 - `just fmt` formats the repository; `just fmt-check` reports files that need it.
 - `just agent-files` checks `.agents/skills` against `.claude/skills` (empty here).
 - `just check` is the gate: `fmt-check` and `agent-files`.
+- `just hooks` installs the shared Lefthook hooks into `.git/hooks` for every worktree of this
+  clone; it never changes global Git settings.
 
 ## Invariants
 
@@ -26,4 +30,6 @@ the account's profile page.
 
 - Push to `main`. It is a public repository with a ruleset: work on a branch and merge a pull
   request.
+- Skip hooks (C7.11): never set `LEFTHOOK=0`, never pass `--no-verify`, and never add a
+  `lefthook-local.yml`. The `pre-push` hook and the ruleset are the gate.
 - Change GitHub settings, repository visibility or access from a workflow, script or agent run.
